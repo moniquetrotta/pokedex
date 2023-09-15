@@ -27,8 +27,9 @@ function loadPokemonItens(offset, limit) {
   });
 }
 
-loadPokemonItens(limit, offset);
+loadPokemonItens(offset, limit);
 
 loadMoreButton.addEventListener('click', () => {
-  loadPokemonItens();
+  offset += limit;
+  loadPokemonItens(offset, limit);
 });
